@@ -1,0 +1,53 @@
+#root {
+  max-width: 1600px; /* aumentar para telas maiores */
+  margin: 0 auto;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+/* Simple utility classes for pizzaria theme */
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.text-muted { color: var(--muted); }
+.btn-primary { background: var(--primary); color: #fff; border-radius: 8px; padding: 8px 12px; border: none; cursor: pointer; }
+.btn-accent { background: var(--accent); color: #fff; border-radius: 8px; padding: 8px 12px; border: none; cursor: pointer; }
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
