@@ -7,6 +7,8 @@ import Order from "../pages/Order";
 import Address from "../pages/Address";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import ForgotPassword from "../pages/ForgotPassword..tsx";
+import ResetPassword from "../pages/ResetPassword";
 
 function RequireAuth({ children }: { children: React.ReactElement }) {
   const token = typeof window !== "undefined" ? localStorage.getItem("pizzaria_token") : null;
@@ -22,6 +24,8 @@ export default function AppRoutes() {
         {/* Public routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Protected routes */}
         <Route path="/products" element={<RequireAuth><Products /></RequireAuth>} />
